@@ -1,5 +1,6 @@
 
 import java.util.Map;
+import java.util.HashMap;
 
 /**
  * Maps are key/value pairs. They are used in situations where we have some value that we'd like
@@ -15,6 +16,8 @@ import java.util.Map;
  */
 public class Lab {
 
+    private String String;
+
     /**
      * Create and instantiate a collection that implements that Map interface, like
      * TreeSet or HashSet. This will be a Map that maps Integer keys to String values.
@@ -26,7 +29,8 @@ public class Lab {
      * so here Integer is a wrapper for int.
      */
     public Map<Integer, String> createMap(){
-        return null;
+        HashMap<Integer, String> value = new HashMap<Integer, String>();
+            return new HashMap<Integer, String>();
     }
 
     /**
@@ -35,8 +39,9 @@ public class Lab {
      * @return the size of map.
      */
     public int getSize(Map<Integer,String> map){
-//        return total number of key/value pairs in the map
-        return 0;
+        return map.size();
+    //        return total number of key/value pairs in the map
+    
     }
 
     /**
@@ -47,7 +52,12 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addKeyValuePair(Map<Integer,String> map, int key, String value){
+        map.put(key, value);
     }
+
+  
+    
+    
 
     /**
      * Get a value from a map given a key.
@@ -56,7 +66,7 @@ public class Lab {
      * @return the value associated with key in map.
      */
     public String getValueFromKey(Map<Integer, String> map, int key){
-        return "";
+        return map.get(key);
     }
 
     /**
@@ -66,6 +76,7 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeKeyValuePair(Map<Integer, String> map, int key){
+        map.remove(key);
     }
 
     /**
@@ -76,6 +87,7 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void overwriteValue(Map<Integer, String> map, int key, String value){
+        map.replace(key, value);
 
     }
 }
